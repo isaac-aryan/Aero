@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
 
-function SearchResponse({ searchText }) {
+
+function SearchResponse({ searchText, apiResponse }) {
   const [displayText, setDisplayText] = useState('');
   const [isVisible, setIsVisible] = useState(false);
 
@@ -40,6 +42,11 @@ function SearchResponse({ searchText }) {
           <span className="animate-pulse">|</span> {/* Blinking cursor */}
         </span>
       </p>
+      <div>
+        <ReactMarkdown>
+            {apiResponse}
+          </ReactMarkdown>
+      </div>
     </div>
   );
 }

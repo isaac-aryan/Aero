@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SearchResponse from './SearchResponse';
 
-const SearchBar = ({ onSearch, onSearchTriggered, placeholder = "Launch" }) => {
+const SearchBar = ({ onSearch, onSearchTriggered, apiResponse, placeholder = "Launch" }) => {
   const [inputValue, setInputValue] = useState('');
   const [searchText, setSearchText] = useState('');
   const [isResultVisible, setIsResultVisible] = useState(false);
@@ -38,7 +38,7 @@ const SearchBar = ({ onSearch, onSearchTriggered, placeholder = "Launch" }) => {
         </div>
       </form>
       
-      {isResultVisible && <SearchResponse searchText={searchText} />}
+      {isResultVisible && <SearchResponse searchText={searchText} apiResponse={apiResponse} />}
     </div>
   );
 };

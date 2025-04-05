@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SearchBar from './SearchBar';
 import { GoogleGenAI } from "@google/genai";
  
 function Hero({ onSearchTriggered }) {
-    
+    const [apiResponse, setResponse] = useState('');
+
     const ai = new GoogleGenAI({ apiKey: process.env.REACT_APP_GOOGLE_API_KEY });
     
     async function main( { input } ) {
-    console.log('Asking about:', input);
-    const response = await ai.models.generateContent({
-      model: "gemini-2.0-flash",
-      contents: input,
-    });
-    console.log(response.text);
+      console.log('Asking about:', input);
+      const query = `If the following input is a question about learning a skill or activity 
+      then please explain how to learn that skill in a series of manageable steps and only give me the steps. Otherwise, if the input is not in
+      that format, ask to rephrase as a how to question: ${input}`;
+      const response = await ai.models.generateContent({
+        model: "gemini-2.0-flash",
+        contents: query,
+      });
+      const markdown = response.text;
+      setResponse(markdown);
+      console.log(response.text);
     }
 
     const handleSearch = (term) => {
@@ -33,6 +39,7 @@ function Hero({ onSearchTriggered }) {
         <SearchBar 
           onSearchTriggered={onSearchTriggered} 
           onSearch={handleSearch} 
+          apiResponse={apiResponse}
         />
       </div>
     );
