@@ -1,6 +1,6 @@
 import React from 'react';
  
-function ActionButton({ text, className, onClick }) {
+function ActionButton({ text, query, className, onClick }) {
   return (
     <button
       className={className}
