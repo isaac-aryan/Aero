@@ -10,7 +10,7 @@ function Header() {
           <input
             type="text"
             placeholder=""
-            className="w-full py-6 px-8 text-gray-100 text-3xl bg-gray-900 rounded-2xl border border-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-700 placeholder-gray-300"
+            className="w-full py-6 pl-8 pr-36 text-gray-100 text-3xl bg-gray-900 rounded-2xl border border-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-700 placeholder-gray-300"
           />
           <button className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-transparent px-4 py-2 text-gray-300 hover:text-white flex items-center text-xl">
             Launch
