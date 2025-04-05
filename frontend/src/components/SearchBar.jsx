@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SearchResponse from './SearchResponse';
 
-const SearchBar = ({ onSearch, onSearchTriggered, apiResponse, placeholder = "" }) => {
+const SearchBar = ({ onSearch, onSearchTriggered, apiResponse, searchTextFS, placeholder = "" }) => {
   const [inputValue, setInputValue] = useState('');
   const [searchText, setSearchText] = useState('');
   const [isResultVisible, setIsResultVisible] = useState(false);

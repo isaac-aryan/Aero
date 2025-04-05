@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import BottomNav from '../components/BottomNav';
+import { useLocation } from 'react-router-dom';
 
 function Aero() {
+  
   const [showBottomNav, setShowBottomNav] = useState(true);
 
   const handleSearchTriggered = () => {

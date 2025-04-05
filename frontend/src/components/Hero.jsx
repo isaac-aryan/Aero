@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SearchBar from './SearchBar';
 import { GoogleGenAI } from "@google/genai";
  
-function Hero({ onSearchTriggered }) {
+function Hero({ onSearchTriggered, searchTextFS }) {
     const [apiResponse, setResponse] = useState('');
 
     const ai = new GoogleGenAI({ apiKey: process.env.REACT_APP_GOOGLE_API_KEY });
