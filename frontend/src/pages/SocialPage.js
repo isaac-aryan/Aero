@@ -15,6 +15,7 @@ function Social() {
       name: 'John',
         pfp: johnImg,
       activity: 'learning how to skate',
+      query: "how to skate",
       status: '"I did this today"'
     },
     {
@@ -22,20 +23,23 @@ function Social() {
       name: 'Mary',
         pfp: maryImg,
       activity: 'learning how to cook',
+        query: "how to cook",
       status: '"Good day\'s work"'
     },
     {
         id: 3,
         name: 'Dan',
           pfp: johnImg,
-        activity: 'learning how to skate',
+        activity: 'learning how to give head',
+        query: "how to give head",
         status: '"I did this today"'
       },
       {
         id: 4,
         name: 'Mary',
           pfp: maryImg,
-        activity: 'learning how to cook',
+        activity: 'learning how to catch a predator',
+        query: "how to catch a predator",
         status: '"Good day\'s work"'
       }
   ];
@@ -63,6 +67,7 @@ function Social() {
                     name={profile.name}
                     pfp={profile.pfp}
                     activity={profile.activity}
+                    query={profile.query}
                     status={profile.status}
                     />
                 ))}
