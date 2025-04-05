@@ -23,7 +23,21 @@ function Social() {
         pfp: maryImg,
       activity: 'learning how to cook',
       status: '"Good day\'s work"'
-    }
+    },
+    {
+        id: 3,
+        name: 'Dan',
+          pfp: johnImg,
+        activity: 'learning how to skate',
+        status: '"I did this today"'
+      },
+      {
+        id: 4,
+        name: 'Mary',
+          pfp: maryImg,
+        activity: 'learning how to cook',
+        status: '"Good day\'s work"'
+      }
   ];
 
   // Sample data for trending skills
@@ -35,33 +49,36 @@ function Social() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-blue-900 to-black">
-      <div className="w-full mx-auto p-8">
-        <div className="bg-gray-900/90 rounded-3xl p-8 shadow-xl border border-gray-800">
-          {/* Header with search bar */}
-          <Header />
-          
-          {/* Main content grid */}
-          <div className="grid grid-cols-3 gap-6 mt-6">
-            {/* Left and middle columns for profile cards */}
-            <div className="col-span-2 space-y-6">
-              {profiles.map(profile => (
-                <ProfileCard 
-                  key={profile.id}
-                  name={profile.name}
-                    pfp={profile.pfp}
-                  activity={profile.activity}
-                  status={profile.status}
-                />
-              ))}
-            </div>
+        <div className="w-full mx-auto p-8">
+            <div className="bg-gray-900/90 rounded-3xl p-8 shadow-xl border border-gray-800">
+            {/* Header with search bar */}
+            <Header />
             
-            {/* Right column for trending skills */}
-            <div className="col-span-1">
-              <TrendingSkills skills={trendingSkills} />
+                {/* Main content grid with divider */}
+                <div className="flex mt-6">
+                    {/* Left and middle columns for profile cards */}
+                    <div className="flex-grow space-y-6 pl-2 pb-2 pr-6 pt-2 h-[500px] overflow-y-auto">
+                    {profiles.map(profile => (
+                        <ProfileCard
+                        key={profile.id}
+                        name={profile.name}
+                        pfp={profile.pfp}
+                        activity={profile.activity}
+                        status={profile.status}
+                        />
+                    ))}
+                    </div>
+                    
+                    {/* Vertical divider */}
+                    <div className="w-px bg-slate-300 self-stretch mx-3"></div>
+                    
+                    {/* Right column for trending skills */}
+                    <div className="w-1/3">
+                    <TrendingSkills skills={trendingSkills} />
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
   );
 }
