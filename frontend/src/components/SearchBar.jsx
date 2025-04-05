@@ -6,6 +6,7 @@ const SearchBar = ({ onSearch, onSearchTriggered, placeholder = "Launch" }) => {
   const [searchText, setSearchText] = useState('');
   const [isResultVisible, setIsResultVisible] = useState(false);
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setSearchText(inputValue);
