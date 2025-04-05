@@ -17,12 +17,8 @@ function Hero() {
         </h1>
       </div>
      
-      <SearchBar 
-        onSearch={handleSearch}
-        placeholder=""
-        className="w-full max-w-4xl mb-16 py-6 bg-transparent border-2 border-gray-400 text-white text-3xl rounded-2xl hover:bg-gray-800 transition-all"
-
-      />
+      
+  
     </div>
   );
 }
