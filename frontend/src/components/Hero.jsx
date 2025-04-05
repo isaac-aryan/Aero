@@ -1,7 +1,13 @@
 import React from 'react';
-import ActionButton from './ActionButton';
+import SearchBar from './SearchBar';
  
 function Hero() {
+
+  const handleSearch = (term) => {
+    console.log('Searching for:', term);
+    // Add your search logic here
+  };
+
   return (
     <div className="flex flex-col items-center justify-center px-4">
       <div className="text-center mb-12">
@@ -11,9 +17,11 @@ function Hero() {
         </h1>
       </div>
      
-      <ActionButton
-        text="Launch"
-        className="w-full max-w-4xl mb-2 py-6 bg-transparent border-2 border-gray-400 text-white text-3xl rounded-2xl hover:bg-gray-800 transition-all"
+      <SearchBar 
+        onSearch={handleSearch}
+        placeholder=""
+        className="w-full max-w-4xl mb-16 py-6 bg-transparent border-2 border-gray-400 text-white text-3xl rounded-2xl hover:bg-gray-800 transition-all"
+
       />
     </div>
   );
