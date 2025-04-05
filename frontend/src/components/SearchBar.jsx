@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SearchResponse from './SearchResponse';
 
-const SearchBar = ({ onSearch, placeholder = "Launch" }) => {
+const SearchBar = ({ onSearch, onSearchTriggered, placeholder = "Launch" }) => {
   const [inputValue, setInputValue] = useState('');
   const [searchText, setSearchText] = useState('');
   const [isResultVisible, setIsResultVisible] = useState(false);
@@ -10,7 +10,8 @@ const SearchBar = ({ onSearch, placeholder = "Launch" }) => {
     e.preventDefault();
     setSearchText(inputValue);
     setIsResultVisible(true);
-    onSearch(); // Trigger the callback to hide BottomNav
+    onSearchTriggered(); // Hide BottomNav
+    onSearch(inputValue); // Original search handler
   };
 
   return (
