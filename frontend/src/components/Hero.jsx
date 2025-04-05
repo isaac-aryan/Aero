@@ -6,7 +6,7 @@ function Hero() {
     <div className="flex-1 flex flex-col items-center justify-center px-4">
       <div className="text-center mb-12">
         <h1 className="text-6xl md:text-8xl mb-2">
-          <span className="text-gray-200">expercience </span>
+          <span className="text-gray-200">experience </span>
           <span className="text-indigo-400">aero.</span>
         </h1>
       </div>
