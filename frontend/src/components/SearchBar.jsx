@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SearchResponse from './SearchResponse';
 
 const SearchBar = ({ onSearch, onSearchTriggered, apiResponse, searchTextFS, placeholder = "" }) => {
@@ -6,13 +6,27 @@ const SearchBar = ({ onSearch, onSearchTriggered, apiResponse, searchTextFS, pla
   const [searchText, setSearchText] = useState('');
   const [isResultVisible, setIsResultVisible] = useState(false);
 
+  // Get the current URL
+  const url = new URL(window.location.href);
+  const searchTerm = url.searchParams.get('search') || '';
+
+  useEffect(() => {
+    if (searchTerm) {
+      setInputValue(searchTerm);
+      performSearch(searchTerm);
+    }
+  }, [searchTerm]);
+
+  const performSearch = (term) => {
+    setSearchText(term);
+    setIsResultVisible(true);
+    onSearchTriggered(); // Hide BottomNav
+    onSearch(term); // Original search handler
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSearchText(inputValue);
-    setIsResultVisible(true);
-    onSearchTriggered(); // Hide BottomNav
-    onSearch(inputValue); // Original search handler
+    performSearch(inputValue);
   };
 
   return (
