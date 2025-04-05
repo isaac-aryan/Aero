@@ -7,7 +7,7 @@ import JoinMissionButton from './components/MissionButton';
  
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-teal-900 to-gray-900 flex flex-col relative">
+    <div className="min-h-screen bg-gradient-to-br from-black via-blue-900 to-black flex flex-col relative">
       <Navbar />
       <JoinMissionButton />
       <Hero />
