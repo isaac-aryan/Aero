@@ -1,21 +1,17 @@
-import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import BottomNav from './components/BottomNav';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Aero from './pages/AeroPage';
+import Social from './pages/SocialPage';
 
 function App() {
-  const [showBottomNav, setShowBottomNav] = useState(true);
-
-  const handleSearchTriggered = () => {
-    setShowBottomNav(false);
-  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-blue-900 to-black flex flex-col relative">
-      <Navbar />
-      <Hero onSearchTriggered={handleSearchTriggered} />
-      {showBottomNav && <BottomNav />}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/aero" element={<Aero />} />
+        <Route path="/" element={<Social />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
  
