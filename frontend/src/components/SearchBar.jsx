@@ -38,7 +38,7 @@ const SearchBar = ({ onSearch, onSearchTriggered, apiResponse, searchTextFS, pla
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             placeholder={placeholder}
-            className="w-full py-6 pl-8 pr-36 text-gray-100 text-3xl bg-gray-900 rounded-2xl border border-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-700 placeholder-gray-300"
+            className="w-full py-6 pl-8 pr-36 text-gray-100 text-3xl bg-gray-900 border border-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-700 placeholder-gray-300"
           />
           <button 
             type="submit"

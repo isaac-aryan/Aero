@@ -1,20 +1,39 @@
 // components/ProfileCard.jsx
 import React from 'react';
 import ActionButton from './ActionButton';
+import CampaignSlogan from './Campaign';
 
 function ProfileCard({ name, pfp, activity, status, query }) {
   return (
-    <div className="bg-gray-900/80 outline outline-slate-300 rounded-2xl p-6">
-      <div className="flex items-start">
-        <div className="w-16 h-16 rounded-full bg-lime-300/90 flex items-center justify-center">
-          {/* This would be an avatar image in a real app */}
-            <img src={pfp} alt={`${name}'s profile`} className="rounded-full w-full h-full object-cover" />
+    <div className="bg-gray-900/90 backdrop-blur-sm border border-gray-700/50 rounded-3xl p-6 transition-all hover:border-lime-400/30 hover:shadow-lg hover:shadow-lime-400/10">
+
+
+      <div className="flex items-start gap-5">
+        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-lime-300 to-lime-500 p-0.5 flex-shrink-0">
+          <img 
+            src={pfp} 
+            alt={`${name}'s profile`} 
+            className="rounded-full w-full h-full object-cover border-2 border-gray-900/80" 
+          />
         </div>
-        <div className="ml-6">
-          <h2 className="text-indigo-400 text-4xl font-medium">{name}</h2>
-          <p className="text-gray-300 text-xl mt-1">{activity}</p>
-            <ActionButton text="Ask aero" query={query} className="bg-lime-300/80 text-black px-1 text-sm rounded-md"/>
-          <p className="text-gray-400 text-2xl mt-6">{status}</p>
+        
+        <div className="flex-1">
+          <div className="flex items-baseline justify-between">
+            <h2 className="text-indigo-300/90 text-2xl font-semibold tracking-tight">{name}</h2>
+            <ActionButton 
+              text="Aero It!" 
+              query={query} 
+              className="bg-lime-400/90 hover:bg-lime-300 text-gray-900 font-medium px-3 py-1 text-xs rounded-lg transition-colors"
+            />
+          </div>
+          
+          <p className="text-gray-400/80 text-sm font-light mt-1 tracking-wide">{activity}</p>
+          
+          {status && (
+            <p className="text-gray-300/90 italic text-lg mt-4 leading-relaxed ">
+              {status}
+            </p>
+          )}
         </div>
       </div>
     </div>

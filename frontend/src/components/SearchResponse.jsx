@@ -53,7 +53,7 @@ function SearchResponse({ searchText, apiResponse }) {
   return (
     <div className={`
       w-full max-w-6xl mt-4 pb-8 p-6 
-      border border-gray-700 rounded-2xl bg-gray-900 text-gray-100
+      border border-gray-700 bg-gray-900 text-gray-100
       overflow-hidden
       ${isVisible ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}
       transition-all duration-700 ease-out

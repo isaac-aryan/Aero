@@ -35,6 +35,7 @@ function Hero({ onSearchTriggered, searchTextFS }) {
             <span className="text-gray-200">experience </span>
             <span className="text-indigo-400">aero.</span>
           </h1>
+
         </div>
         <SearchBar 
           onSearchTriggered={onSearchTriggered} 
