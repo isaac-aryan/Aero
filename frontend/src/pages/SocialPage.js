@@ -76,8 +76,8 @@ function Social() {
         {/* Add the UserProfilePill with proper centering */}
         <div className="flex justify-center my-4">
             <UserProfilePill 
-            userName="Jane Doe"
-            profileImageUrl={liamImg} 
+            userName="Duck Norris"
+            profileImageUrl={duckImg} 
             onLogout={() => console.log("Logging out")}
             />
         </div>

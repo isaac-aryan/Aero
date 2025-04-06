@@ -2,12 +2,12 @@ import React from 'react';
 
 const UserProfilePill = ({ userName, profileImageUrl, onLogout }) => {
   return (
-    <div className="flex items-center bg-slate-800 rounded-full py-2 px-3 pr-5 shadow-md max-w-md">
+    <div className="flex items-center bg-slate-800 rounded-full py-2 px-3 pr-5 shadow-md max-w-md hover:border-lime-400/30 hover:shadow-lg hover:shadow-lime-400/10">
       {/* User Profile Image */}
-      <div className="h-14 w-14 rounded-full overflow-hidden flex-shrink-0 border-2 border-slate-600">
+      <div className="h-10 w-10 rounded-full overflow-hidden flex-shrink-0 border-2 border-slate-600">
         <img 
           src={profileImageUrl} 
-          className="h-full w-full object-cover"
+          className="h-full w-full rounded-full bg-gradient-to-br from-lime-300 to-lime-500 p-0.5 flex-shrink-0 object-cover"
         />
       </div>
       
