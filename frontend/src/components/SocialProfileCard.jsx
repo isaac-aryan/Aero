@@ -1,7 +1,6 @@
 // components/ProfileCard.jsx
 import React from 'react';
 import ActionButton from './ActionButton';
-import CampaignSlogan from './Campaign';
 
 function ProfileCard({ name, pfp, activity, status, query }) {
   return (

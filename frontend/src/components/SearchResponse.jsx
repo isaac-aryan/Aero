@@ -7,7 +7,7 @@ function SearchResponse({ searchText, apiResponse }) {
   const [isVisible, setIsVisible] = useState(false);
   const markdownRef = useRef(null);
   const [typingComplete, setTypingComplete] = useState(false);
-
+  
   // Trigger slide-in animation on mount
   useEffect(() => {
     setIsVisible(true);

@@ -17,9 +17,14 @@ function Header() {
     
   };
 
+  const handleLogo = (e) => {
+      navigate(`/aero`);
+    
+  };
+
   return (
     <div className="flex items-center justify-between">
-      <div className="text-lime-300 text-6xl font-bold">aero</div>
+      <button className="text-lime-300 text-6xl font-bold" onClick={handleLogo}>aero</button>
       <div className="flex-1 mx-6">
         <form onSubmit={handleSearch} className="relative">
           <input

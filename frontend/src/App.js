@@ -14,7 +14,7 @@ function App() {
           <motion.div
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
+            exit={{ x: '100%' }}
             transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
             className="absolute inset-0"
           >
@@ -23,10 +23,10 @@ function App() {
         }/>
         <Route path="/" element={
           <motion.div
-            initial={{ x: 0 }}
+            initial={{ x: '-100%' }}
             animate={{ x: 0 }} // Current page slides partially left
             exit={{ x: '-100%' }} // Fully exits left when leaving
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
             className="absolute inset-0"
           >
             <Social />
