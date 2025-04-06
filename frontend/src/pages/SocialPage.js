@@ -54,7 +54,7 @@ function Social() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-blue-900 to-black">
         <div className="w-full mx-auto pt-8 pr-8 pl-8 pb-1 h-screen">
-            <div className="bg-gray-900/90 rounded-3xl p-8 flex flex-col h-[calc(100%-4rem)] shadow-xl border border-gray-800">
+            <div className="bg-black/60 rounded-3xl p-8 flex flex-col h-[calc(100%-4rem)] shadow-xl border border-gray-800">
             {/* Header with search bar */}
             <Header />
             {/* Main content grid with divider */}

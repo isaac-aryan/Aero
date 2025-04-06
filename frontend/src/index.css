@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 body {
+  background-image: linear-gradient(to right, #060708, #1c1f22);
+  background-color: #060708;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
