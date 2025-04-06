@@ -22,7 +22,7 @@ function ProfileCard({ name, pfp, activity, status, query }) {
             <ActionButton 
               text="Aero It!" 
               query={query} 
-              className="bg-lime-400/90 hover:bg-lime-300 text-gray-900 font-medium px-3 py-1 text-xs rounded-lg transition-colors"
+              className="bg-lime-400/40 hover:bg-lime-300/90 text-gray-900 font-medium px-4 py-2 font-bold text-sm rounded-none transition-all duration-200 border-2 border-lime-400/50 hover:border-lime-300/70"
             />
           </div>
           
