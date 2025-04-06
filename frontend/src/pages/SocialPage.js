@@ -9,6 +9,7 @@ import maryImg from '../assets/mary.png';
 import johnImg from '../assets/john.png';
 import crisImg from '../assets/cristiano.png';
 import liamImg from '../assets/liam.png';
+import UserProfilePill from '../components/UserProfilePill';
 
 function Social() {
   // Simple state to track the posted data
@@ -69,7 +70,17 @@ function Social() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-blue-900 to-black">
+
       <CampaignSlogan />
+                  
+        {/* Add the UserProfilePill with proper centering */}
+        <div className="flex justify-center my-4">
+            <UserProfilePill 
+            userName="Jane Doe"
+            profileImageUrl={liamImg} 
+            onLogout={() => console.log("Logging out")}
+            />
+        </div>
       
       <div className="w-full mx-auto pt-8 pr-8 pl-8 pb-1 h-screen">
         <div className="bg-black/60 rounded-3xl p-8 flex flex-col h-[calc(100%-4rem)] shadow-xl border border-gray-800">
@@ -106,6 +117,7 @@ function Social() {
                   status={profile.status}
                 />
               ))}
+
             </div>
             
             {/* Vertical divider */}
